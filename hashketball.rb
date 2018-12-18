@@ -203,6 +203,7 @@ def winning_team
       counter[info_hash[:team_name]] += stats_hash.fetch(:points)
     end
   end
+  get_all_players
   return counter.key(counter.values.max)
 end
 
