@@ -205,7 +205,7 @@ def winning_team
   # end
   team_info.each do |team, player_stats|
     p team
-    p player_stats
+    p player_stats.values
   end
   return counter.key(counter.values.max)
 end
