@@ -198,13 +198,13 @@ end
 
 def winning_team
   counter = Hash.new(0)
-  game_hash.values.each do |info_hash|
-    info_hash[:players].values.each do |stats_hash|
-      counter[info_hash[:team_name]] += stats_hash.fetch(:points)
-    end
-  end
+  # game_hash.values.each do |info_hash|
+  #   info_hash[:players].values.each do |stats_hash|
+  #     counter[info_hash[:team_name]] += stats_hash.fetch(:points)
+  #   end
+  # end
   team_info.each do |team, player_stats|
-    counter[team] += player_stats[]
+    counter[team] += player_stats[:points]
   end
   return counter.key(counter.values.max)
 end
