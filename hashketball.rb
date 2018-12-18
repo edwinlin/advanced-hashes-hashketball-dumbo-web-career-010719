@@ -204,7 +204,7 @@ def winning_team
     end
   end
   get_all_players.each do |player, hash1|
-    
+    counter[player] += hash1[:points]
   end
   return counter.key(counter.values.max)
 end
