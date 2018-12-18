@@ -206,7 +206,6 @@ def winning_team
   team_info.each do |team, player_stats|
     p player_stats
     player_stats.values do |ele|
-      p ele
       counter[team] += ele[:points]
     end
   end
